@@ -1,0 +1,56 @@
+[
+    {
+        "city": "Austin",
+        "country": "United States",
+        "state": "Texas",
+        "population": "9.64 lakhs (2021)",
+        "density": "3,006.36/sq mi (1,160.76/km2)",
+        "area": "319.94 sq mi (828.64 km2)",
+        "timezone": "UTC − 6"
+    },
+    {
+        "city": "San Francisco",
+        "country": "United States",
+        "state": "California",
+        "population": "808,437 (2022)",
+        "density": "17,237.5/sq mi (6,655.4/km2)",
+        "area": "46.9 sq mi (121.48 km2)",
+        "timezone": "UTC − 8"
+    },
+    {
+        "city": "New York",
+        "country": "United States",
+        "state": "New York",
+        "population": "8,335,897 (2022)",
+        "density": "29,302.66/sq mi (11,313.81/km2)",
+        "area": "472.43 sq mi (1,223.59 km2)",
+        "timezone": "UTC − 5"
+    },
+    {
+        "city": "Seattle",
+        "country": "United States",
+        "state": "Washington",
+        "population": "749,256 (2021)",
+        "density": "8,775.03/sq mi (3,387.95/km2)",
+        "area": "142.07 sq mi (367.97 km2)",
+        "timezone": "UTC − 8"
+    },
+    {
+        "city": "Chicago",
+        "country": "United States",
+        "state": "Illinois",
+        "population": "2,696,555 (2021)",
+        "density": "12,059.84/sq mi (4,656.33/km2)",
+        "area": "234.53 sq mi (607.44 km2)",
+        "timezone": "UTC − 6"
+    },
+    {
+        "city": "Los Angeles",
+        "country": "United States",
+        "state": "California",
+        "population": "3,819,538 (2021)",
+        "density": "8,304.22/sq mi (3,206.29/km2)",
+        "area": "501.55 sq mi (1,299.01 km2))",
+        "timezone": "UTC − 8"
+    }
+]
