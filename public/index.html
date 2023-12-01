@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:large;
+}
+body{
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.container{
+    position: relative;
+    width: 100%;
+    /* max-width: 1000px; */
+    min-height: 100px;
+    margin: 50px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "nav nav nav nav" 
+    "img abo abo abo"
+    "img exp exp exp"  
+    "contact exp exp exp"
+    "edu exp exp exp"  
+    "edu pro pro pro" 
+    "edu blog blog blog";
+    /* box-shadow: 0 25px 55px rgba(0,0,0,0.1); */
+}
+#nav {
+  grid-area: nav;
+  
+}
+#img {
+  grid-area: img;
+  background-color:#638C80;
+  padding: 40px;
+}
+#abo {
+  grid-area: abo;
+  padding: 40px;
+  background-color: floralwhite;
+}
+#contact {
+  grid-area: contact;
+  background-color:#638C80;
+  padding: 40px;
+}
+#exp {
+  grid-area: exp;
+  padding: 40px;
+  background-color: floralwhite;
+}
+#edu {
+  grid-area: edu;
+  background-color:#638C80;
+  padding: 40px;
+}
+#pro {
+  grid-area: pro;
+  padding: 40px;
+  background-color: floralwhite;
+}
+#blog {
+  grid-area: blog;
+  padding: 40px;
+  background-color: floralwhite;
+}
+.container .left_side{
+  position: relative;
+  background:#638C80;
+  padding: 40px;
+}
+.container .right_side{
+  position: relative;
+  background: floralwhite;
+  padding: 40px;
+}
+
+.profiletext{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items:center;
+  padding-bottom: 20px;
+  line-height: 30px;
+  border-bottom: 1px solid #98042D;
+}
+
+.profiletext .imgsrc{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  margin: 15px;
+  overflow: hidden;
+    
+}
+
+.contactInfo{
+  padding-top: 40px;
+}
+.title{
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.contactInfo ul{
+  position: relative;
+}
+.contactInfo ul li{
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.contactInfo ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: brown;
+}
+.contactInfo ul li span {
+  color:#fff;
+  font-weight: 300;
+}
+.education{
+  padding-top: 40px;
+}
+.education li{
+  margin-bottom: 15px;
+
+}
+.education h5{
+  color:#98042D;
+  font-weight: 500;
+
+}
+.education h4{
+  color: white;
+  font-weight: 500;
+
+}
+.about{
+  /* margin-bottom: 50px; */
+  background-color:#F8FAFD;
+}
+.about:last-child{
+  margin-bottom: 0;
+}
+.title2{
+  color:white;
+  background-color:#638C80;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.about .box{
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+.about .box .year{
+  min-width: 150px;
+
+}
+.about .box.year h5{
+  text-transform: uppercase;
+  color: brown;
+  font-weight: 600;
+}
+.about .box .text h4{
+  text-transform: uppercase;
+  color: #98042D;
+  font-size: 16px;
+}
+
+.profiletext{
+  color: white;
+  padding: auto;
+
+}
+.topnav {
+  display:flex;
+  align-items: center;
+  border: 3px solid #638C80;
+  background-color:#F8FAFD;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+/* .nav-sub {
+  
+  padding: 15px;   
+  list-style: none;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-weight: bold;
+} */
+/* .topnav a:hover {
+  background-color:#333;
+  color:white;
+} */
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
+  padding: 5px 15px;
+  padding-right: 20px;
+ 
+  /* border: 2px solid #638C80; */
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: #638C80;
+  color: #fff;
+}
+
+.topnav .icon {
+  display: none;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .about .box{
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "nav" 
+    "img"
+    "abo"
+    "edu"
+    "exp"   
+    "pro" 
+    "blog"
+    "contact";
+    margin: 15px;
+}
+#abo,#img, #edu,#exp,#pro,#blog, #contact{
+  padding: 15px;
+}
+
+#pro {
+background-color: #638C80;
+}
+
+#abo, #exp, #blog{
+  border: 5px solid #638C80;
+}
+.title2 {
+  text-align: center;
+}
+.title, #project{
+  text-align: center;
+  background-color: #fff;
+  color: #638C80;
+}
+.profiletext{
+  border-bottom: unset
+}
+.box1{
+  color: #fff;
+}
+}
+
+@media screen and (max-width: 500px) {
+  .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .topnav.responsive {
+        position: relative;
+        flex-direction: column;
+    }
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav {
+      justify-content: space-between;
+    }
+}
+
+
+ 
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="left_side"> -->
+            <div class="profiletext" id="img">
+
+            <div class="imgsrc">
+                <img src="https://cdn-icons-png.flaticon.com/128/3135/3135789.png" alt="Here We displayed an USERIMAGE">
+                
+            </div>
+            <h4>GAYATHRI CHILUKURI <br><span>FULL STACK DEVELOPER</span></h4>
+            </div>
+                        
+            <div class="contactInfo" id="contact">
+                <h2 class="title">Contact Info:</h2>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                        <span class="text">+1-123-4567-890</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                        <span class="text">abcde@gmail.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i>
+                        </span>
+                        <span class="text">www.website.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span>
+                        <span class="text">www.linkedin.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span class="text">Gayathri Chilukuri, India</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="education" id="edu">
+                <h2 class="title" id="education">Education:</h2>
+                <ul>
+                    <li>
+                        <h5>2021 - 2023</h5>
+                        <h4>Master's in Computer Science</h4>
+                        <h4>University of New Haven</h4>
+                    </li>
+                    <li>
+                        <h5>2015 - 2019</h5>
+                        <h4>Bachelors In Electronics and Communication Engineering</h4>
+                        <h4>Tirumala Engineering college</h4>
+                    </li>
+                    <li>
+                        <h5>2013 - 2015</h5>
+                        <h4>Intermediate</h4>
+                        <h4>NRI Institute of Technologies</h4>
+                    </li>
+                    
+                </ul>
+            </div>
+                
+                
+
+        <!-- </div> -->
+
+        <!-- <div class="right_side"> -->
+
+            <nav id="nav" class="topnav">
+                <!-- <ul class="menu">
+                    <li class="nav-sub"> -->
+                        <a href="#img">PROFILE</a>
+                        <a href="#contact">CONTACT INFO</a>
+                        <a href="#about">ABOUT</a>
+                    <!-- </li>
+                    <li class="nav-sub"> -->
+                        <a href="#education">EDUCATION</a>
+                    <!-- </li>
+                    <li class="nav-sub"> -->
+                        <a href="#project">PROJECTS</a>
+                    <!-- </li>
+                    <li class="nav-sub"> -->
+                        <a href="#experience">EXPERIENCES</a>
+                    <!-- </li>
+                    <li class="nav-sub"> -->
+                        <a href="#blog">BLOGS</a>
+                    <!-- </li> -->
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i></a>
+            
+                <!-- </ul> -->
+            </nav>
+            
+                <div class="about" id="abo">
+                    <h2 class="title2" id="about">About:</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia delectus eligendi esse tempore accusamus, dolore eius, eveniet quos quam quaerat nostrum expedita! Inventore blanditiis et tempore necessitatibus earum laborum iusto?<br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum numquam atque, nulla nobis sequi maiores placeat sunt enim soluta voluptates perspiciatis impedit id cum, molestiae assumenda! Maiores error eaque dolorem.</p>
+                </div>
+                          
+            <div class="about" id="exp">
+                <h2 class="title2" id="experience">Experience:</h2>
+                <div class="box">
+                    <div class="year">
+                        <h5>2021 - Present</h5>
+                        <h5>Company Name</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Full Stack Developer</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi facere natus magnam fuga veniam dolor porro non quo ex, pariatur at aliquid exercitationem in quod libero laboriosam obcaecati cupiditate autem.</p>
+                        
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year">
+                        <h5>2019 - 2021</h5>
+                        <h5>Company Name</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Full Stack Developer</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi facere natus magnam fuga veniam dolor porro non quo ex, pariatur at aliquid exercitationem in quod libero laboriosam obcaecati cupiditate autem.</p>
+                        
+                    </div>
+                </div>
+
+            </div>
+            <div class="about" id="pro">
+                <h2 class="title2" id="project">Projects:</h2>
+                <div class="box1">
+                    <h4>Project1:</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur placeat, porro exercitationem enim ex aut tenetur provident ut minus sunt itaque rem fugiat necessitatibus optio perferendis sequi voluptate amet error.</p>
+
+                </div>
+                <div class="box1">
+                    <h4>Project2:</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur placeat, porro exercitationem enim ex aut tenetur provident ut minus sunt itaque rem fugiat necessitatibus optio perferendis sequi voluptate amet error.</p>
+
+                </div>
+
+            </div>
+            <div class="about" id="blog">
+                <h2 class="title2">Blogs:</h2>
+                <div class="box">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, ducimus. Libero, quam rerum! Eligendi commodi nemo nostrum, dolorum sed facere quos vel esse dicta culpa quae accusamus nobis perspiciatis. Nemo!</p>
+                </div>
+            </div>
+
+          
+    <!-- </div> -->
+    </div>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("nav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+
+     
+</body>
+</html>
